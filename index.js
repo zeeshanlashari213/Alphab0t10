@@ -1284,7 +1284,7 @@ const _0x16a867=_0xc766;(function(_0x194b8d,_0x39c671){const _0x442409=_0xc766,_
 				Iv: 'Linknya error:v'
 			},
 			only: {
-				group: 'Only group',
+				group: 'Cuma bisa di grup sayang',
 				admin: 'Lu kan bukan admin ngentod...',
 			}
 		}
@@ -4205,7 +4205,7 @@ break
 response = await alpha.groupAdd(from, [orang])
 o = response.participants[0]
 let inv = (Object.values(o))
-if(inv[0].code == 409) return reply('Orang yang anda add sudah ada didalam Group!')
+if(inv[0].code == 409) return reply('Orang itu dah di grup sayangg')
 else if(inv[0].code == 403){
 alpha.sendMessage(from, `User private\n\nMengirim Undangan Group Ke @${q.split('@')[0]}`, MessageType.text, {quoted: mek, contextInfo: {mentionedJid: [orang]}})
 alpha.sendMessage(from, orang, inv[0].invite_code, inv[0].invite_code_exp, groupMetadata.subject , `Salah Satu Admin Mengundang Anda Masuk Ke Sini Silahkan Klik Bergabung Untuk Masuk`)
@@ -4225,7 +4225,7 @@ if(!q)return reply(`*Format salah!*\n\n*Example : ${prefix + command} @tag*`)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 yau = q.split('@')[1] + '@s.whatsapp.net'
 alpha.groupRemove(from, [yau])
-reply(`Succses kick target!`)
+reply(`Succses kick target!,btw lu jahad bet`)
 break
 
 case 'rkick': case 'kickreply':
@@ -4268,7 +4268,7 @@ break*/
         break;
        case 'event':
 					if (!isGroup) return reply("Group only");
-        if (!isGroupAdmins && !isOwner && !isCreator && !mek.key.fromMe && !isBotGroupAdmins) return reply("Khusus admin");
+        if (!isGroupAdmins && !isOwner && !isCreator && !mek.key.fromMe && !isBotGroupAdmins) return reply("Buat admin doang");
 					if (args[0] == "on") {
 						if (isEventon) return reply(lang.anjawaUdhOn(command))
 						event.push(from)
@@ -4358,7 +4358,7 @@ break*/
 			
 			case 'tagall':
 			if (!mek.key.fromMe && !isOwner && !isCreator) return reply(lang.onlyOwner())
-			        if (!isGroupAdmins && !isBotGroupAdmins) return reply("Khusus admin");
+			        if (!isGroupAdmins && !isBotGroupAdmins) return reply("lawak bang padahal lu bukan admin");
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -5274,7 +5274,7 @@ break
 
 case 'tictactoe':
 case 'ttt':
-if (!isGroup)return reply('*Khusus group*')
+if (!isGroup)return reply('*buat gc doang*')
 if (mek.message.extendedTextMessage.contextInfo.mentionedJid > 1) return reply('Hanya bisa dengan 1 orang')
 if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) return
 if (fs.existsSync(`./temp/${from}.json`)) return reply(`Sedang Ada Sesi, tidak dapat dijalankan secara bersamaan${enter}Ketik *${prefix}delsesi ttt*, untuk menghapus sesi`)
