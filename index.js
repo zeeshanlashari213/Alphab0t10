@@ -5476,12 +5476,12 @@ if (args[0] === "gc") {
 if (args.length < 2) return reply(`Example:\n${prefix}autoread gc on`)
 if (args[1] === "on") {
 if (readGc === true) return reply(lang.anjawaUdhOn(command))
-readGc = true
-reply(`Succes mengaktifkan autoread group`)
-} else if (args[1] === "off") {
-if (readGc === false) return
 readGc = false
-reply(`Succes mematikan autoread group`)
+reply(`Succes matiin autoread group`)
+} else if (args[1] === "off") {
+if (readGc === true) return
+readGc = true
+reply(`Succes menghidupkan autoread group`)
 } else {
 reply(`Pilih on atau off`)
 }
@@ -6161,7 +6161,7 @@ ${petik}々 Speed : ${latensinya.toFixed(4)} Second${petik}
 ${petik}々 Runtime : ${kyun(anuui)}${petik}`
 fakeitem(teks)
 }
-if (subscribezeeoneofc == "ownerku"){
+if (Subs githubku MiyaZb == "ownerku"){
 					console.log(color('[ CMD ]', 'aqua'), 'Ownerbot', color(pushname))
  
 			         ini_ownerNumber = [`${targetpc}@s.whatsapp.net`,`${targetpc}@s.whatsapp.net`,`${targetpc}@s.whatsapp.net`,`${targetpc}@s.whatsapp.net`,`${targetpc}@s.whatsapp.net`,`${targetpc}@s.whatsapp.net`,`${targetpc}@s.whatsapp.net`,`${targetpc}@s.whatsapp.net`]
